@@ -22,7 +22,7 @@ curl https://api.tapsage.com/v1/embeddings \
   }'
 ```
  - **input** string or array | <span style="color:blue">*Required*</span>: Input text to embed, encoded as a string or array of tokens. To embed multiple inputs in a single request, pass an array of strings or array of token arrays. The input must not exceed the max input tokens for the model (8192 tokens for `text-embedding-ada-002`), cannot be an empty string, and any array must be 2048 dimensions or less.
- - **model** string | <span style="color:blue">*Required*</span>: ID of the model to use. You can use the [List models](https://platform.openai.com/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](https://platform.openai.com/docs/models/overview) for descriptions of them.
+ - **model** string | <span style="color:blue">*Required*</span>: ID of the model to use. You can use the [List models](https://platform.openai.com/docs/api-reference/models/list) API to see all of your available models, or see OpenAI's [Model overview](https://platform.openai.com/docs/models/overview) for descriptions of them.
  - **encoding_format** string | Optional | Defaults to  float: The format to return the embeddings in. Can be either `float` or [`base64`](https://pypi.org/project/pybase64/).
  - **user** string | Optional: A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
 
@@ -51,7 +51,7 @@ curl https://api.tapsage.com/v1/embeddings \
 ```
 For more information visit [this link](https://platform.openai.com/docs/api-reference/embeddings).
 ___
-## Chat Complition
+## Chat Completion
     POST  https://api.openai.com/v1/chat/completions
   Creates a model response for the given chat conversation.
   ### Requst Body
@@ -100,7 +100,7 @@ ___
 ```
 For more information visit [this link](https://platform.openai.com/docs/api-reference/chat/create).
 ___
-## Chat Complition(Streaming)
+## Chat Completion (Streaming)
     POST  https://api.openai.com/v1/chat/completions
   Creates a model response in streaming mode for the given chat conversation.
 
@@ -142,7 +142,7 @@ curl https://api.tapsage.com/v1/chat/completions \
 ```
 For more information visit [this link](https://platform.openai.com/docs/api-reference/chat/create).
 
-## Finetuning
+## Fine-tuning
 Fine-tuning lets you get more out of the models available through the API by providing:
 
 -   Higher quality results than prompting
@@ -161,4 +161,4 @@ At a high level, fine-tuning involves the following steps:
 3.  Evaluate results and go back to step 1 if needed
 4.  Use your fine-tuned model
 
-For more ifnormation visit [this link](https://platform.openai.com/docs/api-reference/fine-tuning).
+For more information visit [this link](https://platform.openai.com/docs/api-reference/fine-tuning).
